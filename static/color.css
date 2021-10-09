@@ -1,0 +1,177 @@
+.color1 {
+    background-image: linear-gradient(to bottom, transparent 40%, rgb(104, 89, 4) 80%), radial-gradient(circle closest-side, rgb(241, 219, 94) 10%, gold 60%, orange);
+}
+
+.color2 {
+    background: linear-gradient(90deg, black, rgb(11, 78, 204), black);
+}
+
+.color3 {
+    background: linear-gradient(110deg, black, rgb(11, 78, 204)10%, black, rgb(11, 78, 204), black);
+}
+
+.color4 {
+    background: repeating-linear-gradient(to top right, black, rgb(11, 78, 204) 10%, black 10%);
+}
+
+.color5 {
+    background: linear-gradient(to right, #3e1c71, #d76d77, #ffaf7b);
+}
+
+.color6 {
+    background: linear-gradient(to right, #283c86, #45a247);
+}
+
+.color7 {
+    background: linear-gradient(to right, #c0392b, #8e44ad);
+}
+
+.color8 {
+    background: linear-gradient(to right, #159957, #155799);
+}
+
+.color9 {
+    background: linear-gradient(to right, #007991, #78ffd6);
+}
+
+.color10 {
+    background: linear-gradient(to right, #eb5757, #000000);
+}
+
+.color11 {
+    background: linear-gradient(to right, #000, #0f9b0f);
+}
+
+.color12 {
+    background: linear-gradient(to right, #20002c, #cbb4d4);
+}
+
+.color13 {
+    background: linear-gradient(#c33768, #1d2671);
+}
+
+.color14 {
+    background: linear-gradient(#34e89e, #0f3443);
+}
+
+.color15 {
+    background: linear-gradient(#44a08d, #093637);
+}
+
+.color16 {
+    background: linear-gradient(to right, #200122, #6f0000);
+}
+
+.color17 {
+    background: linear-gradient(to right, #4568dc, #b06ab3);
+}
+
+.color18 {
+    background: linear-gradient(to right, #43c6ac, #191654);
+}
+
+.color19 {
+    background: linear-gradient(to right, #093028, #237a57);
+}
+
+.color20 {
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+}
+
+.color21 {
+    background: linear-gradient(to right, #f3904f, #3b4371);
+}
+
+.color22 {
+    background: linear-gradient(to right, #ff00cc, #333399);
+}
+
+.color23 {
+    background: linear-gradient(#de6161, #2657eb);
+}
+
+.color24 {
+    background: linear-gradient(#3a6186, #89253e);
+}
+
+.color25 {
+    background: linear-gradient(#000428, #004e92);
+}
+
+.color26 {
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+.color27 {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+.color28 {
+    background: linear-gradient(to right, #000, #434343);
+}
+
+.color29 {
+    background: linear-gradient(to right, #5a3f37, #2c7744);
+}
+
+.color30 {
+    background: linear-gradient(to right, #2f7336, #aa3a38);
+}
+
+.color31 {
+    background: linear-gradient(to right, #114357, #f29492);
+}
+
+.color32 {
+    background: linear-gradient(to right, #403a3e, #be5869);
+}
+
+.color33 {
+    background: linear-gradient(#780206, #061161);
+}
+
+.color34 {
+    background: linear-gradient(#000, #e74c3c);
+}
+
+.color35 {
+    background: linear-gradient(#f0c27b, #4b1248);
+}
+
+.color36 {
+    background: linear-gradient(to right, #606c88, #3f4c6b);
+}
+
+.color37 {
+    background: linear-gradient(to right, #649173, #dbd5a4);
+}
+
+.color38 {
+    background: linear-gradient(to right, #870000, #190a05);
+}
+
+.color39 {
+    background: linear-gradient(to right, #414d0b, #727a17);
+}
+
+.color40 {
+    background: linear-gradient(to right, #283048, #859398);
+}
+
+.color41 {
+    background: linear-gradient(to right, #16222a, #3a6073);
+}
+
+.color42 {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.imagebdy {
+    width: 70%;
+    margin-left: 15%;
+    height: auto;
+}
+
+.twpx {
+    font-size: 20px;
+}
