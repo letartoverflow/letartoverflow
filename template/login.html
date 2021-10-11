@@ -7,14 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />    <title>Log in</title>
     <script class="u-script" type="text/javascript" src="{% static 'out.js' %}"  defer=""></script>
-    <link rel="stylesheet" href="logs.css" />
+    <link rel="stylesheet" href="{% static 'logs.css' %}" />
+    <link rel="stylesheet" href="{% static 'all.css' %}" />
     <link rel="stylesheet" href="{% static 'mode.css' %}" media="screen"/>
   </head>
 
   <body class="dark">
     <div class="container">
-      <div class="form-container  light">
+      <form action="login" method="POST"class="form-container  light">
         <div class="input-group">
+        <p style="color:red;" onclick="klean(this)">{{msg}}</p>
           <label for="userName" class="label-text">Username</label>
           <input name="username" id="userName" class="form-control" placeholder="Enter your Username"aria-describedby="helpId"/>
         </div>
@@ -27,9 +29,9 @@
         <div class="input-group">
           <input type="submit" value="Log in" class="form-btn dark lighter"/>
           <p>not a member?
-          <a href="#">signup</a></p>
+          <a onclick="back(this)" href="signup">signup</a></p>
         </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>

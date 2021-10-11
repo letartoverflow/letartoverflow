@@ -5,8 +5,11 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from .models import Comment, Post
+from django.http import HttpResponseRedirect
+from django.contrib.messages import get_messages
 from django.contrib import messages
 from django.conf import settings
+from django.http import HttpResponseRedirect
 import datetime,os
 time = datetime.datetime.now()
 time = time.strftime("%H:%M:%S")
@@ -158,10 +161,12 @@ def hoome(request):
 
 def logout(request):
    out = request.session.get('me')
-   out = out+str("e")
+   out = "logout"
    request.session['me'] = out
-   messages.info(request, 'log out Successfully, but why? ):')
-   return redirect('/')
+   message = "log out Successfully, but why?"
+   #return HttpResponseRedirect(request.META.get('HTTP_REFERER'), {"msg":message})
+   #return request.META.get('HTTP_REFERER', {"msg":message})
+   return redirect('/', {"msg":message})
 
 @csrf_exempt
 def login(request):
@@ -173,8 +178,8 @@ def login(request):
         request.session['me'] = out
         return redirect('/')
      else:
-        messages.info(request, ':) Wrong Username Or Password')
-        return render(request, 'login.html')
+        message = 'Wrong Username Or Password'
+        return render (request,'login.html', {"msg":message})
    else:
       return render(request, 'login.html')
 
@@ -190,11 +195,11 @@ def signup(request):
       psswd2   = request.POST["password2"]
       if psswd1 == psswd2:
          if User.objects.filter(username=username).exists():
-            messages.info(request, 'Username Taken! :)')
-            return redirect('/signup')
+            message = 'Username Taken! :)'
+            return redirect('/signup', {"msg":message})
          elif User.objects.filter(email=email).exists():
-            messages.info(request, ':) Someone Is Using That Email')
-            return  reverse('Signup')
+            message = "Someone Is Using That Email"
+            return  reverse('Signup', {"msg":message})
          else:
             user = User.objects.create_user(first_name=fname, about=about, image=None, location=None, rank=None, last_name=lname, username=username, password=psswd1, email=email)
             user.save()
@@ -202,8 +207,8 @@ def signup(request):
             request.session['me'] = me
             return redirect('/')
       else:
-         messages.info(request, ':) Password Do Not Match :)')
-         return redirect('/signup')
+         message = ":) Password Do Not Match"
+         return redirect('/signup', {"msg":message})
    else:
       return render(request, "register.html")
 

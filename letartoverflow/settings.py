@@ -79,8 +79,10 @@ WSGI_APPLICATION = 'letartoverflow.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+       #  'ENGINE': 'django.db.backends.sqlite3',
+      #   'NAME': BASE_DIR / 'db.sqlite3',
         'NAME': 'letartoverflow',
-        'USER': 'postgres',
+        'USER': 'devfemibadmus',
         'HOST': 'localhost',
         'PASSWORD': '1234'
     }

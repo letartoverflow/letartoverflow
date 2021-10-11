@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />    <title>Register</title>
     <script class="u-script" type="text/javascript" src="{% static 'out.js' %}"  defer=""></script>
     <link rel="stylesheet" href="{% static 'logs.css' %}"  media="screen"/>
+    <link rel="stylesheet" href="{% static 'all.css' %}"  media="screen"/>
     <link rel="stylesheet" href="{% static 'mode.css' %}" media="screen"/>
   </head>
 
@@ -15,33 +16,29 @@
     <div class="container">
       <form class="form-container  light" method="POST">
         {% csrf_token %}
-            {% for message in messages %}
-                <div class="message" >
-                <p class="text">{{message}}</p>
-                </div>
-            {% endfor %}
+                <p style="color:red;" onclick="klean(this)">{{msg}}</p>    
         <div class="input-group">
           <label for="userName" class="label-text">Username</label>
-          <input name="username" id="userName" class="form-control" placeholder="Enter your Username"aria-describedby="helpId"/>
+          <input required name="username" id="userName" class="form-control" placeholder="Enter your Username"aria-describedby="helpId"/>
         </div>
         <div class="input-group">
           <label for="Email" class="label-text">Email</label>
-          <input type="email"name="email"id="Email"class="form-control"placeholder="Enter your Email"aria-describedby="helpId"/>
+          <input required type="email"name="email"id="Email"class="form-control"placeholder="Enter your Email"aria-describedby="helpId"/>
         </div>
         <div class="input-group">
           <label for="password1" class="label-text">Enter Password</label>
-          <input type="password"name="password1" id="password1" class="form-control" placeholder="Confirm Password"aria-describedby="helpId" />
+          <input required type="password"name="password1" id="password1" class="form-control" placeholder="Confirm Password"aria-describedby="helpId" />
         </div>
         <div class="input-group">
           <label for="password2" class="label-text">Confirm Password</label>
-          <input type="password" name="password2" id="password2" class="form-control" placeholder="Confirm Password"aria-describedby="helpId" />
+          <input required type="password" name="password2" id="password2" class="form-control" placeholder="Confirm Password"aria-describedby="helpId" />
         </div>
             <input type="checkbox" id="checkbox" name="remember" value="on" onclick="showPassword()">
             <label for="checkbox">Show password</label>
         <div class="input-group">
           <input type="submit" value="Sign Up" class="form-btn lighter dark" name="" />
           <p>already a member?
-          <a href="login">login</a></p>
+          <a onclick="back(this)" href="login">login</a></p>
         </div>
       </form>
     </div>
