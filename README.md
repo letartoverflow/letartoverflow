@@ -20,16 +20,16 @@ This project will do below:
 This are developer who supports and buys us coffee:
 
 
-<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+<a href = "https://github.com/letartoverflow/contributors">
   <img src = "https://contrib.rocks/image?repo = devfemibadmus/letartoverflow"/>
 </a>
 
 
-<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo = n3rd/letartoverflow"/>
+<a href = "https://github.com/letartoverflow/contributors">
+  <img src = "https://contrib.rocks/image?repo = n33ds0n/letartoverflow"/>
 </a>
 
 
-<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+<a href = "https://github.com/letartoverflow/contributors">
   <img src = "https://contrib.rocks/image?repo = kcubeterm/letartoverflow"/>
 </a>
