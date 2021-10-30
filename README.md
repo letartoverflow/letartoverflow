@@ -20,16 +20,16 @@ This project will do below:
 This are developer who supports and buys us coffee:
 
 
-<a href = "https://github.com/letartoverflow/contributors">
-  <img src = "https://contrib.rocks/image?repo = devfemibadmus/letartoverflow"/>
+<a href="https://github.com/letartoverflow/contributors">
+  <img src="https://avatars.githubusercontent.com/u/84607331?v=4" width=32/>
 </a>
 
 
-<a href = "https://github.com/letartoverflow/contributors">
-  <img src = "https://contrib.rocks/image?repo = n33ds0n/letartoverflow"/>
+<a href="https://github.com/letartoverflow/contributors">
+  <img src="https://avatars.githubusercontent.com/u/78763485?v=4" width="32"/>
 </a>
 
 
-<a href = "https://github.com/letartoverflow/contributors">
-  <img src = "https://contrib.rocks/image?repo = kcubeterm/letartoverflow"/>
+<a href="https://github.com/letartoverflow/contributors">
+  <img src="https://avatars.githubusercontent.com/u/50498359?v=4" width="32" />
 </a>
