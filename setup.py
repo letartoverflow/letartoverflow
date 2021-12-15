@@ -1,0 +1,18 @@
+import os, time
+
+os.system("pip install pip --upgrade pip")
+os.system("apt upgrade && pkg upgrade")
+os.system("pip install django")
+os.system("pip install wheel")
+os.system("pkg install -y python ndk-sysroot clang make \\ libjpeg-turbo")
+os.system("pip install pillow")
+os.system("apt upgrade && pkg upgrade")
+os.system("pkg install postgresql python make clang")
+os.system("pip3 install psycopg2")
+os.system(" mkdir -p $PREFIX/var/lib/postgresql")
+os.system("initdb $PREFIX/var/lib/postgresql")
+os.system("pg_ctl -D $PREFIX/var/lib/postgresql start")
+os.system("createdb letartoverflow")
+print("enter 1234 in below prompt")
+os.system("createuser --superuser devfemibadmus")
+os.system("psql letartoverflow")

@@ -1,0 +1,324 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="polytechnic of ibadan, the polytechnic of ibadan update, TPI, devfemibadmus">
+    <meta name="description" content="
+    - 🔭 Connect all art around the world ...
+    - 🌱 Fasten job opportunity...
+    - 👯 Connection around the world ...
+    - 🤔 Gives inspiration and ideas on creation ...
+    - 💬 Questioned and Answered ...
+    - 📫 Increase Art Population ...
+    - 😄 Serves memes and happy time ...
+    - 📫 Faster way to reach ...">
+    <meta name="generator" content="Let Art Overflow">
+    <meta property="og:title" content="Let Art Overflow | Creators Louge">
+    <meta property="og:description" content="
+    - 🔭 Connect all art around the world ...
+    - 🌱 Fasten job opportunity...
+    - 👯 Connection around the world ...
+    - 🤔 Gives inspiration and ideas on creation ...
+    - 💬 Questioned and Answered ...
+    - 📫 Increase Art Population ...
+    - 😄 Serves memes and happy time ...">
+    <meta property="og:image" content="{% static 'laof.jpg' %}">
+    <meta property="og:url" content="letartoverflow.github.io">
+    <link rel="icon" href="{% static 'laof.jpg' %}">
+    <title>Let Art Overflow | Creators Louge</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" media="screen"/>
+    <link rel="stylesheet" href="{% static 'mode.css' %}" media="screen"/>
+    <link rel="stylesheet" href="{% static 'all.css' %}" media="screen"/>
+    <link rel="stylesheet" href="{% static 'color.css' %}" media="screen"/>
+    <script src="{% static 'script.js' %}"></script>
+    <style>
+      .poster,.guess {
+      border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body class="light" id="body">
+    <header class="light headborder" id="other3">
+     <div class="head">
+     
+       <h3 class="site">BigGun <span class="drawing"> drawing</span></h2>
+
+       <ol class="hright">
+             <span>
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onclick="menu(this)" class="home-icon darkt menu" viewBox="0 0 59.365 59.365" x="0px" y="0px" id="svg-0197" >
+                                <path d="M58.363,26.632l-9.681-8.989V6.365h-8v3.849L29.682,0L1.002,26.632c-0.404,0.376-0.428,1.009-0.052,1.414
+                                       c0.375,0.404,1.008,0.427,1.414,0.052l4.319-4.011v3.278v32h16V35.302c0-1.07,0.867-1.937,1.937-1.937h10.126
+                                       c1.07,0,1.937,0.867,1.937,1.937v24.063h16v-32v-3.278l4.319,4.011c0.192,0.179,0.437,0.267,0.681,0.267
+                                       c0.269,0,0.536-0.107,0.732-0.319C58.791,27.641,58.767,27.008,58.363,26.632z">
+                                </path>
+                                 </svg>
+                         <div class="menus light darkborder ">
+                             <a href="#" class="lighter">arts</a>
+                             <a href="#" class="lighter">dark</a>
+                             <a href="#" class="lighter">cool</a>
+                             <a href="#" class="lighter">light</a>
+                             {% if login %}
+                             <a href="logout" onclick="back(this)"class="lighter">log out</a>
+                             {% else %}
+                             <a href="login"onclick="back(this)" class="lighter">sign in</a>
+                             {% endif %}
+                             <a href="#" class="lighter">settings</a>
+                         </div>
+             </span> 
+             <li>
+                       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="eye-icon darkt" viewBox="0 0 488.85 488.85" x="0px" y="0px" id="svg-0371" >
+                 <g>
+                 <path d="M244.425,98.725c-93.4,0-178.1,51.1-240.6,134.1c-5.1,6.8-5.1,16.3,0,23.1c62.5,83.1,147.2,134.2,240.6,134.2   s178.1-51.1,240.6-134.1c5.1-6.8,5.1-16.3,0-23.1C422.525,149.825,337.825,98.725,244.425,98.725z M251.125,347.025   c-62,3.9-113.2-47.2-109.3-109.3c3.2-51.2,44.7-92.7,95.9-95.9c62-3.9,113.2,47.2,109.3,109.3   C343.725,302.225,302.225,343.725,251.125,347.025z M248.025,299.625c-33.4,2.1-61-25.4-58.8-58.8c1.7-27.6,24.1-49.9,51.7-51.7   c33.4-2.1,61,25.4,58.8,58.8C297.925,275.625,275.525,297.925,248.025,299.625z">
+                 </path>
+                 </g>
+                  </svg>
+             </li> 
+             <li class="remove">.
+             </li>
+             {% if login %}
+             <a onclick="back(this)" href="{{user.username}}">
+             <li class="poster">
+              <img src="{% static 'images/13.jpg' %}"  class="posterimg" onclick="imagebox(this)">
+             </li>
+             </a>
+             {% else %}
+             <a onclick="back(this)" href="account">
+             <li class="poster">
+              <img src="{% static 'images/12.jpg' %}" class="posterimg" onclick="imagebox(this)">
+             </li>
+             </a>
+             {% endif %}
+       </ol>
+     </div>
+    </header>
+    <div class="escape" id="top"></div>
+    <div class="pole1 light">
+           <div class="p2guy lightscroll">
+              <ul>
+              <li>memes</li>
+              <li>nature</li>
+              <li>design</li>
+              <li>graphic</li>
+              <li>drawing</li>
+              <li>cartoon</li>
+              <li>painting</li>
+              <li>photograph</li>
+              <li>illustration</li>
+              <li>architecture</li>
+              </ul>
+           </div>
+    </div>
+    <div class="imagebox dark" id="imagebox">
+          <span class="hot-today twpx" onclick="clos()">See all</span>
+          <span class="close twpx" onclick="clos()">X</span>
+          <img src="" id="imageb">
+    </div>
+    <div class="containers dark" id="other1">
+        <div class="container light">
+            <div class="guesses ">
+               <div class="guestme darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+               <div class="guest darkborder">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guestimg">
+                  <li class="guess">
+                    <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="guessimg">
+                  </li>
+               </div>
+            </div>
+            <div class="comment light" id="createpost">
+                   <textarea oninput="grow(this)" placeholder="Share some of your thoughts..." id="word"></textarea>
+                   <h5 class="rate lighter"><a  href="studio"><li>Studio</li></a> <li>Photo</li> <li>Sticker</li> <li>
+                  <form action="post">
+                   <input name="body" type="hidden">
+                   <input type="submit" onclick="post('home')" value="post">
+                  </form></li></h5>
+            </div>
+         <div id="postbody">
+            <div class="post dark" onclick="topComment">
+              <div class="userdtails"><a href="#">
+                   <div class="poster">
+                       <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="posterimg">
+                   </div> 
+                   <div class="user"><li class="name lighter">Dev Femi Badmus</li><li class="bb">@devdfemibadmus</li></div></a> 
+                   <div class="imagenum"></div>
+              </div>
+              <div class="scrollpost" onscroll="scrolling(this)">
+                <div class="postcontent">
+                  <p class="title">
+                  title of my postincase its long long long lon
+                  title of my postincase its long long long lon
+                  </p>
+                  <p class="content maxx" onclick="postwide(this)">
+                  let assume bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+                  cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+                  dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                  eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+                  ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+                  gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
+                  hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+                  iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+                  jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
+                  kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                  llllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+                  mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+                  nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+                  oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+                  pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
+                  qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+                  rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+                  ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                  tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+                  uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
+                  vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                  yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                  zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+                  </p>
+                </div>
+                <div class="postimagebody">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="postimage">
+                </div>
+                <div class="postimagebody">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="postimage">
+                </div>
+                <div class="postimagebody">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="postimage">
+                </div>
+                <div class="postimagebody">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="postimage">
+                </div>
+                <div class="postimagebody">
+                  <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="postimage">
+                </div>
+              </div>
+              <h5 class="rate lighter"><li>100views</li> <li>love</li> <li onclick="topComment()">166comment</li> <li onclick="sharePost()">share</li></h5>
+              <h5 class="talk lighter"><li>3daysago</li></h5>
+            </div>
+            <div class="comments dark nodisplay" id="topComment">
+               <div class="userdtails"><a href="#">
+                   <div class="poster">
+                       <img src="{% static 'images/13.jpg' %}" onclick="imagebox(this)"  class="posterimg">
+                   </div> <div class="user"><li class="name lighter">Dev Femi Badmus</li><li class="bb">@devfemibadmus</li></div></a>
+               </div>   
+               <div class="content"><p class="contenttalk maxnx"  onclick="postwide(this, 'd')">sdsa sdfsdfas fda,
+                .scrollpo
+                sdfas nvubfuvbfuv dfdfd dj j vbfjdvbu757+wordbreak:
+                breakall;Vshdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhf
+                hn757+wordbreak:breakall;Vshdhdhfhfhn757+wordbreak:breaka
+                ll;Vshdhdhfhfhn7shdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhf
+                hn757+wordbreak:breakall;Vshdhdhfhfhn757+wordbreak:breaka
+                ll;Vshdhdhfhfhn7shdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhf
+                hn757+wordbreak:breakall;Vshdhdhfhfhn757+wordbreak:breaka
+                ll;Vshdhdhfhfhn7shdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhf
+                hn757+wordbreak:breakall;Vshdhdhfhfhn757+wordbreak:breaka
+                ll;Vshdhdhfhfhn7shdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhf
+                hn757+wordbreak:breakall;Vshdhdhfhfhn757+wordbreak:breaka
+                ll;Vshdhdhfhfhn757+wordbreak:breakall;Vshdhdhfhfhn757+word
+                break:breakall;Vshdhdhfhfhn757+wordbreak:breakall;Vshdhdhfh
+                fbvfffdsdfdfd</p>
+               </div>
+               <h5 class="talk lighter"><li>13likes</li> <li>3daysago</li></h5>
+            </div>
+            <div class="comment light">
+                   <textarea oninput="grow(this)" placeholder="What is your Opinion..."></textarea>
+                   <h5 class="rate lighter"><li>GIF</li> <li>Photo</li> <li>Sticker</li> <li>Share</li></h5>
+            </div>
+         </div>
+        </div>
+    </div>
+    <div class="pole2 light">
+           <div class="p2guy lightscroll">
+              <ul>
+              <li>photograph for beginner (10mins)</li>
+              <li>illustration effects (25mins)</li>
+              <li>lighting effect (15mins)</li>
+              <li>3D for beginner (10mins)</li>
+              <li>nature drawing guilds (30mins)</li>
+              <li>something mode</li>
+              <li>something mode</li>
+              <li>something mode</li>
+              <li>something mode</li>
+              <li>something mode</li>
+              </ul>
+          </div>
+    </div>
+    <div class="bottom"></div>
+    <footer class="light footborder" id="other2">
+     <div class="foot">
+       <ol class="hright">
+                <li class="mode">more...</li>
+                <li class="mode">design</li> 
+                <li class="mode">graphic</li>
+                <a href="#top"> 
+                <li class="mode lighter">top</li></a>
+       </ol>
+     </div>
+    </footer>
+  </body>
+</html>

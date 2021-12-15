@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: lato;
+    font-size: 1em;
+}
+
+.container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-container {
+    -webkit-box-shadow: 0 10px 20px 0, 0 6px 6px 0;
+    box-shadow: 0 10px 20px 0, 0 6px 6px 0;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.profile-picture {
+    padding: 10px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    overflow: hidden;
+    display: inline;
+    position: relative;
+    border-radius: 50%;
+}
+
+.profileimg {
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+}
+
+input,
+label {
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input {
+    visibility: hidden;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .profile-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 12200px) and (min-width: 993px) {
+    .profile-container {
+        width: 50%;
+    }
+}
+
+.rank {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding: 0.5rem;
+}
+
+h5 {
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.btns {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding: 0.5rem;
+}
+
+.about-user p {
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    padding: 0.3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #0b82ea;
+    cursor: pointer;
+}
+
+button:nth-child(2) {
+    background-color: #ff3700;
+}
+
+.rating {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    text-align: center;
+    color: #0b82ea;
+}
+
+
+/*# sourceMappingDev= devfemibadmus */
